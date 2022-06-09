@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene background="color: #FAFAFA">
+      <a-assets>
+        <img id="space" src="images/space.jpg" crossorigin="anonymous" />
+      </a-assets>
+      <!--position: left right, up down, further closer--> 
+      <a-sky 
+      material = "src: #space"
+      ></a-sky>
+
+      <a-entity position="0 0 0" particle-system="preset: dust" maxParticleCount="10000" size="3"></a-entity>
+
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+    </a-scene>
+  </body>
+</html>
